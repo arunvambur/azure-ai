@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureCongnitiveServices", "AzureCongnitiveServices\AzureCongnitiveServices.csproj", "{DDAA0241-2654-407C-8897-7E1FC7883C4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureCongnitiveServices", "AzureCongnitiveServices\AzureCongnitiveServices.csproj", "{DDAA0241-2654-407C-8897-7E1FC7883C4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalyzeFacialAttributes", "AnalyzeFacialAttributes\AnalyzeFacialAttributes.csproj", "{3FF069C6-7B2E-40F1-92FF-8F75D8256658}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DDAA0241-2654-407C-8897-7E1FC7883C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDAA0241-2654-407C-8897-7E1FC7883C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDAA0241-2654-407C-8897-7E1FC7883C4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FF069C6-7B2E-40F1-92FF-8F75D8256658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF069C6-7B2E-40F1-92FF-8F75D8256658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF069C6-7B2E-40F1-92FF-8F75D8256658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FF069C6-7B2E-40F1-92FF-8F75D8256658}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

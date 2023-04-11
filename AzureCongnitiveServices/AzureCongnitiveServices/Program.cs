@@ -16,8 +16,8 @@ namespace ComputerVisionQuickstart
     {
         // <snippet_vars>
         // Add your Computer Vision subscription key and endpoint
-        static string subscriptionKey = "PASTE_YOUR_COMPUTER_VISION_SUBSCRIPTION_KEY_HERE";
-        static string endpoint = "PASTE_YOUR_COMPUTER_VISION_ENDPOINT_HERE";
+        static string subscriptionKey = "2272fe154c9a48b6a4e6a6bf0287a627";
+        static string endpoint = "https://tu-cogsvc.cognitiveservices.azure.com/";
         // </snippet_vars>
         // </snippet_using_and_vars>
 
@@ -56,7 +56,7 @@ namespace ComputerVisionQuickstart
             DetectObjectsLocal(client, DETECT_LOCAL_IMAGE).Wait();
 
             // Detect domain-specific content in both a URL image and a local image.
-            DetectDomainSpecific(client, DETECT_DOMAIN_SPECIFIC_URL, DETECT_DOMAIN_SPECIFIC_LOCAL).Wait();
+            //DetectDomainSpecific(client, DETECT_DOMAIN_SPECIFIC_URL, DETECT_DOMAIN_SPECIFIC_LOCAL).Wait();
 
             // Generate a thumbnail image from a URL and local image
             GenerateThumbnail(client, ANALYZE_URL_IMAGE, DETECT_LOCAL_IMAGE).Wait();

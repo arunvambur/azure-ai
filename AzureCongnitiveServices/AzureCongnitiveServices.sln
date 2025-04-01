@@ -33,13 +33,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EchoBot", "EchoBot\EchoBot.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthoringQandA", "AuthoringQandA\AuthoringQandA.csproj", "{AD1547D5-070C-4BB9-9B59-28EA15F3BF30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBot", "ConsoleBot\ConsoleBot.csproj", "{276A1D09-1A08-4AE6-A529-7A3041CE31DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleBot", "ConsoleBot\ConsoleBot.csproj", "{276A1D09-1A08-4AE6-A529-7A3041CE31DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WelcomeUserBot", "WelcomeUserBot\WelcomeUserBot.csproj", "{6481AC5B-F0E1-4909-92EB-E4076E133B30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WelcomeUserBot", "WelcomeUserBot\WelcomeUserBot.csproj", "{6481AC5B-F0E1-4909-92EB-E4076E133B30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingCardsBot", "UsingCardsBot\UsingCardsBot.csproj", "{3FAD9D76-9D21-4B4B-B8F2-0F07F0BAE816}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsingCardsBot", "UsingCardsBot\UsingCardsBot.csproj", "{3FAD9D76-9D21-4B4B-B8F2-0F07F0BAE816}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingAdaptiveCard", "UsingAdaptiveCard\UsingAdaptiveCard.csproj", "{08CB3308-AA09-4F33-A610-81299BD2E4C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsingAdaptiveCard", "UsingAdaptiveCard\UsingAdaptiveCard.csproj", "{08CB3308-AA09-4F33-A610-81299BD2E4C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageAnalysis", "ImageAnalysis\ImageAnalysis.csproj", "{02915B71-52C4-4A61-A51B-78BC4E96D965}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcrReader", "OcrReader\OcrReader.csproj", "{4112A68E-2BAB-4826-AD67-98031C0E373A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceDetection", "FaceDetection\FaceDetection.csproj", "{40DD5305-10D7-479C-865A-E2B99B69D8F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +129,18 @@ Global
 		{08CB3308-AA09-4F33-A610-81299BD2E4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08CB3308-AA09-4F33-A610-81299BD2E4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08CB3308-AA09-4F33-A610-81299BD2E4C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02915B71-52C4-4A61-A51B-78BC4E96D965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02915B71-52C4-4A61-A51B-78BC4E96D965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02915B71-52C4-4A61-A51B-78BC4E96D965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02915B71-52C4-4A61-A51B-78BC4E96D965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4112A68E-2BAB-4826-AD67-98031C0E373A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4112A68E-2BAB-4826-AD67-98031C0E373A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4112A68E-2BAB-4826-AD67-98031C0E373A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4112A68E-2BAB-4826-AD67-98031C0E373A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40DD5305-10D7-479C-865A-E2B99B69D8F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40DD5305-10D7-479C-865A-E2B99B69D8F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40DD5305-10D7-479C-865A-E2B99B69D8F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40DD5305-10D7-479C-865A-E2B99B69D8F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

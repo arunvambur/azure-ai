@@ -8,9 +8,8 @@ namespace question_answering
     {
         static void Main(string[] args)
         {
-
-            Uri endpoint = new Uri("https://qna-transunion.cognitiveservices.azure.com/");
-            AzureKeyCredential credential = new AzureKeyCredential("a125c94692314e4393caf95bc2f70d5d");
+            Uri endpoint = new Uri("https://ai-language-service-arvenka.cognitiveservices.azure.com/");
+            AzureKeyCredential credential = new AzureKeyCredential("9D8M5I7tyg80TBZTHb6cTEcwrDarM3jVQZtwki6dwnl3TVmBH1TNJQQJ99BDACYeBjFXJ3w3AAAaACOGtzyN");
             string projectName = "SurfaceBookProject";
             string deploymentName = "production";
 
@@ -19,12 +18,18 @@ namespace question_answering
             QuestionAnsweringClient client = new QuestionAnsweringClient(endpoint, credential);
             QuestionAnsweringProject project = new QuestionAnsweringProject(projectName, deploymentName);
 
-            Response<AnswersResult> response = client.GetAnswers(question, project);
-
-            foreach (KnowledgeBaseAnswer answer in response.Value.Answers)
+            while (true)
             {
-                Console.WriteLine($"Q:{question}");
-                Console.WriteLine($"A:{answer.Answer}");
+                Console.Write("Q:>");
+                question = Console.ReadLine();
+
+                Response<AnswersResult> response = client.GetAnswers(question, project);
+
+                foreach (KnowledgeBaseAnswer answer in response.Value.Answers)
+                {
+                    //Console.WriteLine($"Q:{question}");
+                    Console.WriteLine($"A:>{answer.Answer}");
+                }
             }
         }
     }

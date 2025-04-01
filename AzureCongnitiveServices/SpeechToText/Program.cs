@@ -7,7 +7,7 @@ using Microsoft.CognitiveServices.Speech.Audio;
 class Program
 {
     // This example requires environment variables named "SPEECH_KEY" and "SPEECH_REGION"
-    static string speechKey = "b857866b2fda4302b8c312defeee8ab8";
+    static string speechKey = "60FpTf43tHUfmL0JYwTHiH4RYPqwyNeXH9aQKXeZeIxWAnrmr4pHJQQJ99BCACYeBjFXJ3w3AAAEACOGsFiY";
     static string speechRegion ="eastus";
 
     static void OutputSpeechRecognitionResult(SpeechRecognitionResult speechRecognitionResult)
@@ -15,10 +15,10 @@ class Program
         switch (speechRecognitionResult.Reason)
         {
             case ResultReason.RecognizedSpeech:
-                Console.WriteLine($"RECOGNIZED: Text={speechRecognitionResult.Text}");
+                Console.Write($"{speechRecognitionResult.Text}");
                 break;
             case ResultReason.NoMatch:
-                Console.WriteLine($"NOMATCH: Speech could not be recognized.");
+                //Console.WriteLine($"NOMATCH: Speech could not be recognized.");
                 break;
             case ResultReason.Canceled:
                 var cancellation = CancellationDetails.FromResult(speechRecognitionResult);
@@ -39,14 +39,17 @@ class Program
         var speechConfig = SpeechConfig.FromSubscription(speechKey, speechRegion);
         //speechConfig.SpeechRecognitionLanguage = "en-US";
         //speechConfig.SpeechRecognitionLanguage = "ta-IN";
-        //speechConfig.SpeechRecognitionLanguage = "en-IN";
-        speechConfig.SpeechRecognitionLanguage = "de-DE";
+        speechConfig.SpeechRecognitionLanguage = "en-IN";
+        //speechConfig.SpeechRecognitionLanguage = "de-DE";
 
         using var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
         using var speechRecognizer = new SpeechRecognizer(speechConfig, audioConfig);
 
         Console.WriteLine("Speak into your microphone.");
-        var speechRecognitionResult = await speechRecognizer.RecognizeOnceAsync();
-        OutputSpeechRecognitionResult(speechRecognitionResult);
+        while (true)
+        {
+            var speechRecognitionResult = await speechRecognizer.RecognizeOnceAsync();
+            OutputSpeechRecognitionResult(speechRecognitionResult);
+        }
     }
 }

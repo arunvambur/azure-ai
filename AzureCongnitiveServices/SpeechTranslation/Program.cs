@@ -8,7 +8,7 @@ using Microsoft.CognitiveServices.Speech.Translation;
 class Program
 {
     // This example requires environment variables named "SPEECH_KEY" and "SPEECH_REGION"
-    static string speechKey = "b857866b2fda4302b8c312defeee8ab8";
+    static string speechKey = "60FpTf43tHUfmL0JYwTHiH4RYPqwyNeXH9aQKXeZeIxWAnrmr4pHJQQJ99BCACYeBjFXJ3w3AAAEACOGsFiY";
     static string speechRegion = "eastus";
 
     static void OutputSpeechRecognitionResult(TranslationRecognitionResult translationRecognitionResult)
@@ -16,10 +16,10 @@ class Program
         switch (translationRecognitionResult.Reason)
         {
             case ResultReason.TranslatedSpeech:
-                Console.WriteLine($"RECOGNIZED: Text={translationRecognitionResult.Text}");
+                Console.WriteLine($"English: {translationRecognitionResult.Text}");
                 foreach (var element in translationRecognitionResult.Translations)
                 {
-                    Console.WriteLine($"TRANSLATED into '{element.Key}': {element.Value}");
+                    Console.WriteLine($"Deutch: '{element.Key}': {element.Value}");
                 }
                 break;
             case ResultReason.NoMatch:
@@ -42,14 +42,17 @@ class Program
     async static Task Main(string[] args)
     {
         var speechTranslationConfig = SpeechTranslationConfig.FromSubscription(speechKey, speechRegion);
-        speechTranslationConfig.SpeechRecognitionLanguage = "en-US";
+        speechTranslationConfig.SpeechRecognitionLanguage = "en-IN";
         speechTranslationConfig.AddTargetLanguage("de");
 
         using var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
         using var translationRecognizer = new TranslationRecognizer(speechTranslationConfig, audioConfig);
 
         Console.WriteLine("Speak into your microphone.");
-        var translationRecognitionResult = await translationRecognizer.RecognizeOnceAsync();
-        OutputSpeechRecognitionResult(translationRecognitionResult);
+        while (true)
+        {
+            var translationRecognitionResult = await translationRecognizer.RecognizeOnceAsync();
+            OutputSpeechRecognitionResult(translationRecognitionResult);
+        }
     }
 }
